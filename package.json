@@ -11,7 +11,7 @@
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
     "@razorpay/i18nify": "^1.2.1",
-    "@razorpay/i18nify-react": "^1.0.5",
+    "@razorpay/i18nify-react": "^1.0.17",
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",

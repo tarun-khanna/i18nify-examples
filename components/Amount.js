@@ -1,6 +1,16 @@
 import { formatNumber } from "@razorpay/i18nify";
-import { Text } from "react-native";
+import { useI18nContext } from "@razorpay/i18nify-react";
+import { Text, Button } from "react-native";
 
 export default function Amount({ value }) {
-  return <Text>{formatNumber(value, { currency: "INR" })}</Text>;
+  const { setI18nState } = useI18nContext();
+  function clickHandler() {
+    setI18nState({ locale: "de-DE" });
+  }
+  return (
+    <>
+      <Text>{formatNumber(value, { currency: "INR" })}</Text>
+      <Button title="Change locale to German" onPress={clickHandler} />
+    </>
+  );
 }
