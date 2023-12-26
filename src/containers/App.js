@@ -4,7 +4,7 @@ import { I18nProvider } from "@razorpay/i18nify-react";
 
 const App = ({ data }) => {
   return (
-    <I18nProvider>
+    <I18nProvider initData={data}>
       <div>
         <h1>Server-Side Rendering without Next.js</h1>
         <Amount value={2000000} data={data} />

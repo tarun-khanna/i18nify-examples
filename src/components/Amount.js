@@ -5,11 +5,20 @@ import React, { useEffect } from "react";
 const Amount = ({ value, data }) => {
   const { setI18nState } = useI18nContext();
 
+  function onLocaleChange() {
+    setI18nState({ locale: "de-DE" });
+  }
+
   useEffect(() => {
     setI18nState(data);
   }, []);
 
-  return <div>{formatNumber(value)}</div>;
+  return (
+    <div>
+      {formatNumber(value)}
+      <button onClick={onLocaleChange}>change locale to German</button>
+    </div>
+  );
 };
 
 export default Amount;

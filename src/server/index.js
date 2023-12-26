@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   const [preferredLanguage] = acceptLanguage.split(",");
 
   // Extract the locale from the preferred language (e.g., 'en-US' from 'en-US,en;q=0.9')
-  const [locale] = preferredLanguage.split(";")[0].trim().split("-");
+  const locale = preferredLanguage.split(";")[0].trim();
 
   // Attach the extracted locale to the request object for later use
   req.locale = locale;
