@@ -9,10 +9,6 @@ const Amount = ({ value, data }) => {
     setI18nState({ locale: "de-DE" });
   }
 
-  useEffect(() => {
-    setI18nState(data);
-  }, []);
-
   return (
     <div>
       {formatNumber(value)}
