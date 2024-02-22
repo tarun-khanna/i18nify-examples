@@ -1,4 +1,4 @@
-import { formatNumber } from "@razorpay/i18nify";
+import { formatNumber } from "@razorpay/i18nify-js/currency";
 import { useI18nContext } from "@razorpay/i18nify-react";
 import { Text, Button } from "react-native";
 
